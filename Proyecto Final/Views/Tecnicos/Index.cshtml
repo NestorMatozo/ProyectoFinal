@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ProyectoFinal_ParteAdmin.Models.Tecnicos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<style>
+    .ticket-container {
+        padding: 20px;
+    }
+    .ticket {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .ticket-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .ticket-id {
+        font-weight: bold;
+    }
+
+    .bCrear p {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+    }
+   
+    .ticket-link {
+        text-decoration: none;
+        color: #2196F3;
+    }
+
+    .ticket-info div {
+        margin-bottom: 5px;
+    }
+
+   
+</style>
+
+<h1>Listado de Técnicos</h1>
+
+
+
+        @foreach (var item in Model)
+        {
+            <div class="ticket">
+                <div class="ticket-detail">
+                    <span class="ticket-id"> @Html.DisplayFor(modelItem => item.Usuario.id_usuario)</span>
+                    <a asp-action="Details" asp-route-id="@item.id_tecnico">Ver detalles</a>
+                </div>
+                <div class="ticket-info">
+                    <div>
+                        <strong>Técnico:</strong>
+                        @Html.DisplayFor(modelItem => item.Usuario.nombre)
+                    </div>
+                    <div>
+                        <strong>Rol:</strong>
+                        @Html.DisplayFor(modelItem => item.rol)
+                    </div>
+                    <div>
+                        <strong>Área:</strong>
+                        @Html.DisplayFor(modelItem => item.area)
+                    </div>
+                </div>
+                <a asp-action="Edit" asp-route-id="@item.id_tecnico">Editar</a> 
+                
+                <a asp-action="Delete" asp-route-id="@item.id_tecnico">Eliminar</a>
+
+            </div>
+    
+
+
+                  
+        }
+<a asp-action="Create" class="bCrear"><p>Crear Nuevo Técnico</p></a>

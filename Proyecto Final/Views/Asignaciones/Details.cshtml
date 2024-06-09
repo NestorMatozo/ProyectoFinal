@@ -1,0 +1,54 @@
+﻿@model ProyectoFinal_ParteAdmin.Models.AsignacionViewModel
+
+@{
+    ViewData["Title"] = "Detalles de la Asignación";
+}
+
+<h1>Detalles de la Asignación</h1>
+
+<div>
+    <h4>Asignación</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            ID
+        </dt>
+        <dd class="col-sm-10">
+            @Model.id_asignaciones
+        </dd>
+        <dt class="col-sm-2">
+            Nombre Técnico
+        </dt>
+        <dd class="col-sm-10">
+            @Model.NombreTecnico
+        </dd>
+        <dt class="col-sm-2">
+            Nombre Cliente
+        </dt>
+        <dd class="col-sm-10">
+            @Model.NombreCliente
+        </dd>
+        <dt class="col-sm-2">
+            Fecha
+        </dt>
+        <dd class="col-sm-10">
+            @Model.fecha.ToShortDateString()
+        </dd>
+        <dt class="col-sm-2">
+            Estado
+        </dt>
+        <dd class="col-sm-10">
+            @Model.estado
+        </dd>
+        <dt class="col-sm-2">
+            Comentario
+        </dt>
+        <dd class="col-sm-10">
+            @Model.comentario
+        </dd>
+    </dl>
+    <div>
+        <a href="/Asignaciones/Edit/@Model.id_asignaciones">Editar</a> |
+        <a href="/Asignaciones">Volver a la Lista</a>
+    </div>
+</div>

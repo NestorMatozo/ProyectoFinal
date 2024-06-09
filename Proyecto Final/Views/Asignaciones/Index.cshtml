@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProyectoFinal_ParteAdmin.Models.AsignacionViewModel>
+
+@{
+    ViewData["Title"] = "Asignaciones";
+}
+
+<div class="container">
+    <div class="header">
+        <h1>Asignaciones</h1>
+    </div>
+    <div class="content">
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-content">
+                        <p>ID: @item.id_asignaciones</p>
+                        <p>Nombre Técnico: @item.NombreTecnico</p>
+                        <p>Nombre Cliente: @item.NombreCliente</p>
+                        <p><strong>Comentario:</strong></p>
+                        <p>@item.comentario</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/Asignaciones/Details/@item.id_asignaciones">Ver Información Completa</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
