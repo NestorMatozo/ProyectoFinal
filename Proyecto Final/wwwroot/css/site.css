@@ -1,0 +1,282 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .header h2 {
+        margin: 0;
+    }
+
+    .header nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content p {
+    margin: 5px 0;
+}
+
+.card-footer a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+    .card-footer a:hover {
+        text-decoration: underline;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .header h2 {
+        margin: 0;
+    }
+
+    .header nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+.form-tecnico {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .form-tecnico .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(50% - 10px); /* Para alinear en dos columnas */
+        margin-bottom: 15px;
+    }
+
+        .form-tecnico .form-group.full-width {
+            flex: 1 1 100%; /* Para campos de ancho completo */
+        }
+
+        .form-tecnico .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-tecnico .form-group input,
+        .form-tecnico .form-group select {
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+            .form-tecnico .form-group input[readonly] {
+                background-color: #e9ecef;
+                cursor: not-allowed;
+            }
+
+    .form-tecnico .text-danger {
+        color: #dc3545;
+    }
+
+    /* Estilos para el botón */
+    .form-tecnico .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #ffffff;
+        transition: background-color 0.3s;
+    }
+
+        .form-tecnico .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+/* Estilos específicos para el formulario de cliente */
+.form-cliente {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .form-cliente .form-group {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 calc(50% - 10px); /* Para alinear en dos columnas */
+        margin-bottom: 15px;
+    }
+
+        .form-cliente .form-group.full-width {
+            flex: 1 1 100%; /* Para campos de ancho completo */
+        }
+
+        .form-cliente .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-cliente .form-group input,
+        .form-cliente .form-group select {
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+            .form-cliente .form-group input[readonly] {
+                background-color: #e9ecef;
+                cursor: not-allowed;
+            }
+
+    .form-cliente .text-danger {
+        color: #dc3545;
+    }
+
+    /* Estilos para el botón */
+    .form-cliente .btn-primary {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #ffffff;
+        transition: background-color 0.3s;
+    }
+
+        .form-cliente .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+
+.navbar-nav .nav-link {
+    margin-right: 15px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+}
+.navbar-brand {
+    font-size: 30px; /* Ajusta el tamaño del texto */
+    
+    color: #007bff; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+    .navbar-brand:hover {
+        color: #0056b3; /* Color del texto al pasar el mouse */
+    }
